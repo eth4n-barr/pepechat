@@ -1,0 +1,23 @@
+name: Rust
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    name: Build
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        run: |
+          curl https://sh.rustup.rs -sSf | sh -s -- --profile minimal -y
+          cd ${{github.workspace}}
+          cargo build
+          cargo test
+
+ 
