@@ -1,2 +1,2 @@
 [workspace]
-members = ["pepechat", "pepeclient"]
+members = ["pepechat", "pepeclient", "pepechat-test/test-connector", "pepechat-tracker/tracker", "pepechat-tracker/tracker-connector"]
